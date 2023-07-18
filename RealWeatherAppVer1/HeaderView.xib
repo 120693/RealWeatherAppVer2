@@ -8,15 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner">
-            <connections>
-                <outlet property="cityNameLabel" destination="O3s-hu-fPb" id="F9x-GV-hiE"/>
-                <outlet property="feelTempLabel" destination="UPS-Q4-fYy" id="ANc-xA-FdK"/>
-                <outlet property="iconImageView" destination="JQv-dT-euu" id="UQR-jj-0HA"/>
-                <outlet property="maxTempLabel" destination="SCY-JL-h5B" id="51b-9c-5jq"/>
-                <outlet property="minTempLabel" destination="Cns-EZ-yTm" id="CPM-dn-OCm"/>
-            </connections>
-        </placeholder>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HeaderView" customModule="RealWeatherAppVer1" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="393" height="306"/>
@@ -76,6 +68,13 @@
                 <constraint firstItem="nS9-jR-VcE" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="AKe-jA-8Je"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="cityNameLabel" destination="O3s-hu-fPb" id="RDE-XY-ggZ"/>
+                <outlet property="feelTempLabel" destination="UPS-Q4-fYy" id="sqP-OG-JKq"/>
+                <outlet property="iconImageView" destination="JQv-dT-euu" id="nu6-oT-Ip3"/>
+                <outlet property="maxTempLabel" destination="SCY-JL-h5B" id="3xh-Xg-YgY"/>
+                <outlet property="minTempLabel" destination="Cns-EZ-yTm" id="AjI-Bl-2G5"/>
+            </connections>
             <point key="canvasLocation" x="130.53435114503816" y="180.98591549295776"/>
         </view>
     </objects>

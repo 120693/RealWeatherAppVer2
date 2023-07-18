@@ -43,11 +43,17 @@ class ViewController: UIViewController {
         Task {
             var viewsList: [UIViewController] = []
             for cityName in cityNames {
-                let resultViewController = ResultViewController(cityName: cityName)
-                let weatherModel = try await sss(cityName: cityName)
-                resultViewController.weatherInfo = weatherModel
+                // 이러면 스토리보드에서 가져오는 것이 아니라 아예 새로 만든다ㅠㅠㅠㅠ
+                //let resultViewController = ResultViewController(cityName: cityName)
                 
-                viewsList.append(resultViewController)
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                
+                if let resultViewController = storyboard.instantiateViewController(withIdentifier: "ResultViewController") as? ResultViewController {
+                    let weatherModel = try await sss(cityName: cityName)
+                    resultViewController.weatherInfo = weatherModel
+                    
+                    viewsList.append(resultViewController)
+                }
             }
             
             

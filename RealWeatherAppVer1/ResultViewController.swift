@@ -37,34 +37,24 @@ class ResultViewController: UIViewController {
     var dayName: [String] = ["월","화","수","목","금","토","일"]
     var dayIcon: [String] = ["10d","01d","02d","03d","04d","11d","13d"]
     
-    var cityName: String
+//    var cityName: String
     
-    init(cityName: String) {
-        self.cityName = cityName
-        super.init(nibName: nil, bundle: nil)
-        
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    // 스토리보드로 할 때는 init 사용하지 않는다
+//    init(cityName: String) {
+//        self.cityName = cityName
+//        super.init(nibName: nil, bundle: nil)
+//
+//    }
+//
+//    required init?(coder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         getWeatherKeyValue()
         
-//        tableView.delegate = self
-//        tableView.dataSource = self
-//
-//        tableView.register(UINib(nibName: "HeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "HeaderView")
-//        tableView.register(UINib(nibName: "WeekTableViewCell", bundle: nil), forCellReuseIdentifier: "WeekTableViewCell")
-//        tableView.register(UINib(nibName: "CollectionTableViewCell", bundle: nil), forCellReuseIdentifier: "CollectionTableViewCell")
-//        tableView.register(UINib(nibName: "FooterView", bundle: nil), forHeaderFooterViewReuseIdentifier: "FooterView")
-////         Do any additional setup after loading the view.
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
         tableView.delegate = self
         tableView.dataSource = self
 
@@ -72,7 +62,18 @@ class ResultViewController: UIViewController {
         tableView.register(UINib(nibName: "WeekTableViewCell", bundle: nil), forCellReuseIdentifier: "WeekTableViewCell")
         tableView.register(UINib(nibName: "CollectionTableViewCell", bundle: nil), forCellReuseIdentifier: "CollectionTableViewCell")
         tableView.register(UINib(nibName: "FooterView", bundle: nil), forHeaderFooterViewReuseIdentifier: "FooterView")
+////         Do any additional setup after loading the view.
     }
+    
+//    override func viewDidAppear(_ animated: Bool) {
+//        tableView.delegate = self
+//        tableView.dataSource = self
+//
+//        tableView.register(UINib(nibName: "HeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "HeaderView")
+//        tableView.register(UINib(nibName: "WeekTableViewCell", bundle: nil), forCellReuseIdentifier: "WeekTableViewCell")
+//        tableView.register(UINib(nibName: "CollectionTableViewCell", bundle: nil), forCellReuseIdentifier: "CollectionTableViewCell")
+//        tableView.register(UINib(nibName: "FooterView", bundle: nil), forHeaderFooterViewReuseIdentifier: "FooterView")
+//    }
     
     func getWeatherKeyValue() {
         

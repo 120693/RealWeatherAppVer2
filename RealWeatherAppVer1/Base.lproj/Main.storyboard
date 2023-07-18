@@ -84,26 +84,26 @@
             <objects>
                 <viewController storyboardIdentifier="ResultViewController" id="28T-gR-MBF" customClass="ResultViewController" customModule="RealWeatherAppVer1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MJr-wu-2ae">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gyc-86-45c">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pfJ-Jm-Hi8">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5P3-bc-Nvo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="gyc-86-45c" firstAttribute="leading" secondItem="5P3-bc-Nvo" secondAttribute="leading" id="3sk-B1-ahh"/>
-                            <constraint firstItem="5P3-bc-Nvo" firstAttribute="trailing" secondItem="gyc-86-45c" secondAttribute="trailing" id="EaE-ZA-e6B"/>
-                            <constraint firstItem="5P3-bc-Nvo" firstAttribute="bottom" secondItem="gyc-86-45c" secondAttribute="bottom" id="Ydd-Q8-0CB"/>
-                            <constraint firstItem="gyc-86-45c" firstAttribute="top" secondItem="5P3-bc-Nvo" secondAttribute="top" id="qmz-1h-yT3"/>
+                            <constraint firstItem="pfJ-Jm-Hi8" firstAttribute="leading" secondItem="5P3-bc-Nvo" secondAttribute="leading" id="Kla-SB-TPT"/>
+                            <constraint firstItem="5P3-bc-Nvo" firstAttribute="bottom" secondItem="pfJ-Jm-Hi8" secondAttribute="bottom" id="RvG-ep-DeK"/>
+                            <constraint firstItem="5P3-bc-Nvo" firstAttribute="trailing" secondItem="pfJ-Jm-Hi8" secondAttribute="trailing" id="WzB-pH-4lA"/>
+                            <constraint firstItem="pfJ-Jm-Hi8" firstAttribute="top" secondItem="5P3-bc-Nvo" secondAttribute="top" id="XZd-zd-ucr"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="C5K-JJ-6L1"/>
                     <connections>
-                        <outlet property="tableViewController" destination="gyc-86-45c" id="ig1-g8-RLd"/>
+                        <outlet property="tableView" destination="pfJ-Jm-Hi8" id="kjD-rx-Jy7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sTl-QZ-2fe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -113,12 +113,8 @@
         <!--Page View Controller-->
         <scene sceneID="0Lf-JD-fun">
             <objects>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="OvT-oP-p1k" customClass="PageViewController" customModule="RealWeatherAppVer1" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nyX-9i-nf2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="OvT-oP-p1k" customClass="PageViewController" customModule="RealWeatherAppVer1" customModuleProvider="target" sceneMemberID="viewController">
-                    <connections>
-                        <segue destination="28T-gR-MBF" kind="show" id="RJj-7B-CO8"/>
-                    </connections>
-                </pageViewController>
             </objects>
             <point key="canvasLocation" x="947" y="-90"/>
         </scene>
